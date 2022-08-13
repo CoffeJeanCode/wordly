@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "servor": "^4.0.2"
+  },
+  "name": "wordly",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "serve": "servor src index.html --browse --reload"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
