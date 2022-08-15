@@ -96,7 +96,7 @@ const deleteLetter = () => {
 
 const checkRow = () => {
   const guess = guessRows[currentRow].join("").toUpperCase();
-  if (currentTile < 4) {
+  if (currentTile === 5) {
     fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${guess.toLowerCase()}`
     ).then((res) => {
