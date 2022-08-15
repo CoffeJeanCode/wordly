@@ -42,9 +42,10 @@ body {
   margin: 4px;
 }
 
-.key-container button:nth-child(21),
-.key-container button:nth-child(30) {
-  width: 68px;
+.key-container button:nth-child(20),
+.key-container button:nth-child(28) {
+  width: 73px;
+  margin-right: 1.5rem;
 }
 
 .tile-container div {

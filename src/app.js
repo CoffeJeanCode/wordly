@@ -18,7 +18,6 @@ const keys = [
   "J",
   "K",
   "L",
-  "Ñ",
   "ENTER",
   "Z",
   "X",
@@ -85,18 +84,19 @@ const addLetter = (letter) => {
 };
 
 const deleteLetter = () => {
+  if (currentTile <= 0) return;
   currentTile--;
   const tile = document.getElementById(
     `guessRow-${currentRow}-tile-${currentTile}`
   );
   tile.textContent = "";
-  tile.removeAttribute("data");
+  tile.setAttribute("data", "");
   guessRows[currentRow][currentTile] = "";
 };
 
 const checkRow = () => {
   const guess = guessRows[currentRow].join("").toUpperCase();
-  if (currentTile === 5) {
+  if (currentTile < 4) {
     fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${guess.toLowerCase()}`
     ).then((res) => {
